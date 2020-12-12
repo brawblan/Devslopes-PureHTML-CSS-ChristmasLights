@@ -1,0 +1,227 @@
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-image: url('https://media1.giphy.com/media/B26ZEdZZg75vTunlSq/200w.webp?cid=ecf05e474mq5dxufdzwmihy6niu18tqpar3qle4vlthghsnd&rid=200w.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.light-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.light-box h2 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+/* Bulb container */
+.light-container {
+  border: 10px solid;
+  border-image: repeating-linear-gradient(
+    60deg,
+    green 10px,
+    white 20px,
+    red 30px
+  ) 15;
+  width: 75vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.left { /* 20deg, leaning left */
+  transform: rotate(-20deg);
+}
+.right { /* -20deg, leaning right */
+  transform: rotate(20deg);
+}
+
+/* Lightbulbs with color */
+/* red */
+.lightbulb-red input[type="checkbox"] {
+  display: none;
+}
+.lightbulb-red input[type="checkbox"] + label .red {
+  content: "";
+  width: 40px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #F1948Ab6;
+  z-index: 1; 
+}
+.lightbulb-red input[type="checkbox"]:checked + label .red {
+  content: "";
+  background-color: red;
+  box-shadow: 0 0 50px red;
+}
+
+/* orange */
+.lightbulb-orange input[type="checkbox"] {
+  display: none;
+}
+.lightbulb-orange input[type="checkbox"] + label .orange {
+  content: "";
+  width: 40px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #F0B27Ab6;
+  z-index: 1; 
+}
+.lightbulb-orange input[type="checkbox"]:checked + label .orange {
+  content: "";
+  background-color: #F39C12;
+  box-shadow: 0 0 50px #F5B041;
+}
+
+/* yellow */
+.lightbulb-yellow input[type="checkbox"] {
+  display: none;
+}
+.lightbulb-yellow input[type="checkbox"] + label .yellow {
+  content: "";
+  width: 40px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #F9E79Fb6;
+  z-index: 1; 
+}
+.lightbulb-yellow input[type="checkbox"]:checked + label .yellow {
+  content: "";
+  background-color: yellow;
+  box-shadow: 0 0 50px yellow;
+}
+
+/* green */
+.lightbulb-green input[type="checkbox"] {
+  display: none;
+}
+.lightbulb-green input[type="checkbox"] + label .green {
+  content: "";
+  width: 40px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #9FE2BFb6;
+  z-index: 1; 
+}
+.lightbulb-green input[type="checkbox"]:checked + label .green {
+  content: "";
+  background-color: #00FF00;
+  box-shadow: 0 0 50px #00FF00;
+}
+
+/* blue */
+.lightbulb-blue input[type="checkbox"] {
+  display: none;
+}
+.lightbulb-blue input[type="checkbox"] + label .blue {
+  content: "";
+  width: 40px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #5DADE2b6;
+  z-index: 1; 
+}
+.lightbulb-blue input[type="checkbox"]:checked + label .blue {
+  content: "";
+  background-color: blue;
+  box-shadow: 0 0 50px blue;
+}
+
+/* indigo */
+.lightbulb-indigo input[type="checkbox"] {
+  display: none;
+}
+.lightbulb-indigo input[type="checkbox"] + label .indigo {
+  content: "";
+  width: 40px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #6f00ffa1;
+  z-index: 1; 
+}
+.lightbulb-indigo input[type="checkbox"]:checked + label .indigo {
+  content: "";
+  background-color: #6f00ff;
+  box-shadow: 0 0 50px #6f00ff;
+}
+
+/* violet */
+.lightbulb-violet input[type="checkbox"] {
+  display: none;
+}
+.lightbulb-violet input[type="checkbox"] + label .violet {
+  content: "";
+  width: 40px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #b740ffb4;
+  z-index: 1; 
+}
+.lightbulb-violet input[type="checkbox"]:checked + label .violet {
+  content: "";
+  background-color: #EE82EE;
+  box-shadow: 0 0 50px #EE82EE;
+}
+
+/* base of bulb */
+.base {
+  width: 30px;
+  height: 30px;
+  background-color: #0B5345;
+  margin: auto;
+  border-radius: 6px;
+  z-index: 5;
+  position: relative;
+  top: 7px;
+  right: 1px;
+  transform: rotate(-3deg);
+}
+
+/* Tungsten */
+.line1 {
+  border: 1px solid #FCF3CF;
+  transform: rotate(80deg);
+  position: relative;
+  top: 30px;
+  right: 6px;
+  width: 60px;
+}
+.line2 {
+  border: 1px solid #FCF3CF;
+  transform: rotate(-80deg);
+  position: relative;
+  top: 28px;
+  right: 16px;
+  width: 60px;
+}
+.line3 {
+  border: 1px solid #FCF3CF;
+  transform: rotate(-10deg);
+  position: relative;
+  top: 28px;
+  right: -14px;
+  width: 10px;
+}
+.line4 {
+  border: 1px solid #FCF3CF;
+  transform: rotate(-10deg);
+  position: relative;
+  top: 38px;
+  right: -11px;
+  width: 15px;
+}
+.line5 {
+  border: 1px solid #FCF3CF;
+  transform: rotate(-10deg);
+  position: relative;
+  top: 46px;
+  right: -10px;
+  width: 17px;
+}
